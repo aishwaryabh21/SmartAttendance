@@ -1,0 +1,6 @@
+opencv-contrib-python==5.0.0.93
+flask>=3.0.0
+
+# NOTE: if you already have opencv-contrib-python installed at a different
+# version and cv2.face.LBPHFaceRecognizer_create() fails with an
+# AttributeError, reinstall with: pip install opencv-contrib-python==5.0.0.93

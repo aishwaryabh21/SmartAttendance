@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VisiClass · CAM-01 · Attendance Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="rec-dot" aria-hidden="true"></span>
+      <span class="rec-label">REC</span>
+      <span class="cam-id">CAM&#8211;01</span>
+      <span class="cam-name">CLASSROOM&#8211;A</span>
+    </div>
+    <div class="topbar-right">
+      <span id="clock">--:--:--</span>
+    </div>
+  </header>
+
+  <main class="console">
+    <div class="title-block">
+      <p class="eyebrow">PHASE 1 / 4 &#8212; FACE RECOGNITION FROM RECORDED FEED</p>
+      <h1>VisiClass Attendance Monitor</h1>
+      <p class="subtitle">Recognized faces are marked present automatically as the feed is processed.</p>
+    </div>
+
+    <section class="stat-row">
+      <div class="stat-tile">
+        <span class="stat-label">Enrolled</span>
+        <span class="stat-value" id="stat-total">&#8212;</span>
+      </div>
+      <div class="stat-tile stat-present">
+        <span class="stat-label">Present</span>
+        <span class="stat-value" id="stat-present">&#8212;</span>
+      </div>
+      <div class="stat-tile stat-absent">
+        <span class="stat-label">Absent</span>
+        <span class="stat-value" id="stat-absent">&#8212;</span>
+      </div>
+    </section>
+
+    <section class="feed-frame">
+      <span class="bracket bracket-tl" aria-hidden="true"></span>
+      <span class="bracket bracket-tr" aria-hidden="true"></span>
+      <span class="bracket bracket-bl" aria-hidden="true"></span>
+      <span class="bracket bracket-br" aria-hidden="true"></span>
+
+      <div class="feed-header">
+        <span>ID</span>
+        <span>NAME</span>
+        <span>STATUS</span>
+        <span>TIMESTAMP</span>
+      </div>
+
+      <div id="roster" class="roster">
+        <div class="empty-state">Waiting for status data&hellip;</div>
+      </div>
+    </section>
+
+    <p class="footnote">
+      Status refreshes every 2s from <code>data/attendance_status.json</code>.
+      Run <code>python process_video.py --video &lt;file&gt;</code> to update it.
+    </p>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "Aishwarya": {
+    "status": "Absent",
+    "timestamp": null
+  },
+  "anagha": {
+    "status": "Present",
+    "timestamp": "0:00:01",
+    "marked_at_wallclock": "2026-08-19 23:19:19"
+  },
+  "anjali": {
+    "status": "Absent",
+    "timestamp": null
+  },
+  "anusha": {
+    "status": "Present",
+    "timestamp": "0:00:01",
+    "marked_at_wallclock": "2026-08-19 23:19:19"
+  },
+  "apoorva": {
+    "status": "Absent",
+    "timestamp": null
+  },
+  "housa": {
+    "status": "Present",
+    "timestamp": "0:00:00",
+    "marked_at_wallclock": "2026-08-19 23:19:19"
+  },
+  "keerti": {
+    "status": "Absent",
+    "timestamp": null
+  },
+  "neha": {
+    "status": "Absent",
+    "timestamp": null
+  },
+  "saniya": {
+    "status": "Absent",
+    "timestamp": null
+  },
+  "sinchan": {
+    "status": "Absent",
+    "timestamp": null
+  },
+  "soumya": {
+    "status": "Absent",
+    "timestamp": null
+  },
+  "vijayalaxmi": {
+    "status": "Absent",
+    "timestamp": null
+  }
+}
